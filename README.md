@@ -8,4 +8,5 @@ ultrasound sensors to give a live displacement measurement (averaged) to
 the closest object infront. The device will be controlled over wifi on a 
 VNC connection and show a the live preview of what the mounted RPi 
 camera sees.
+Yeaaaa cunts
 
