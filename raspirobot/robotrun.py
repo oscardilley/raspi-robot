@@ -1,1 +1,9 @@
-print("Hello, you have sucessfully entered my mainrun program, here I will call functions for the robot") #test
+print("Hello, welcome to my robot") #test
+form picamera import PiCamera
+from picamera import color
+from time import sleep
+
+camera = PiCamera()
+camera.start_preview()
+sleep(5)
+camera.stop_preview()
