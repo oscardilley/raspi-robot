@@ -9,7 +9,7 @@ GPIO.setup(echo, GPIO.IN)
 GPIO.output(trig, False)
 sleep(2)
 
-def distance():
+def distance1():
     GPIO.output(trig, True)
     sleep(0.00001)
     GPIO.output(trig, False)
@@ -25,6 +25,6 @@ def distance():
     return distance
 
 while True:
-    dist = distance()
+    dist = distance1()
     print("Distance = %.2f cm" %dist)
     sleep(0.5)
