@@ -24,7 +24,7 @@ def distance():
     distance = pulse_duration*(34326/2)
     return distance
 
-While True:
+while True:
     dist = distance()
     print("Distance = %.2f cm" %dist)
     sleep(0.5)
