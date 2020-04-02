@@ -18,7 +18,7 @@ def distance():
     
     while GPIO.input(echo) ==0:
         pulse_start = time.time()
-    while GPio.input(echo) ==1:
+    while GPIO.input(echo) ==1:
         pulse_end = time.time()
     pulse_duration = pulse_end - pulse_start
     distance = pulse_duration*(34326/2)
