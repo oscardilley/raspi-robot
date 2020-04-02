@@ -1,0 +1,29 @@
+import RPi.GPIO as GPIO
+from time import sleep, time
+GPIO.setmode(GPIO.BOARD)
+trig = 13
+echo = 12
+GPIO.setup(trig, GPIO.OUT)
+GPIO.setup(echo, GPIO.IN)
+GPIO.output(trig, False)
+sleep(2)
+
+def distance():
+    GPIO.output(trig, True)
+    sleep(0.00001)
+    GPIO.output(trig, False)
+    
+    while GPIO.input(echo) ==0:
+        pulse_start = time()
+    while GPio.input(echo) ==0:
+        pulse_end = time()
+    pulse_duration = pulse_end - pulse_start
+    distance = pulse_duration*(34326/2)
+    return distance
+
+try:
+    while True:
+        dist = distance()
+        print("Distance = %.2f cm" %dist)
+        sleep(0.1)
+    
