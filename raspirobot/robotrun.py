@@ -5,6 +5,27 @@
 # This should be clearly organised and simple, calling functions without much other code.
 #-------------------------------------------------------------------------------------------------------------------------
 
-From time import sleep
+#import distance functions, find a way to use a function to calculate the average value using def distance_average(1, 2):
+
+#import forwards, backwards, left, right functions
+
+#boot up initial functionality and rest for a second or two
 print("Initialising robot...")
-sleep(3)
+sleep(2)
+
+#run camera function
+
+#link camera display/ preview function to a show camera button on centre of GUI
+
+#change view button on GUI cycles through desired PI camera effects
+
+#use a text.repeat(500, distance_average) to call the distance into GUI every 0.5s
+
+#take an input value from slider 0-100 for %PWM speed and input that into all direction functions
+
+#link the direction functions to the buttons, on when held
+
+#make buttons exclusive to press if possible
+
+#final GUI.display()
+
