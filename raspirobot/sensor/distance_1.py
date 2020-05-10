@@ -11,4 +11,22 @@ print("Settling sensor 1")
 sleep(2)
 
 def distance_1():
+  GPIO.output(trigger_1, True)
+  sleep(0.00001) #sensor requires a 10us squarewave to begin sensing
+  GPIO.output(trigger_1, False)
+  pulse_1_start = time.time() #unsure why these lines are required, test again without
+  pulse_1_end = time.time() # "
+  
+  while GPIO.input(echo_1)==0:
+    pulse_1_start = time.time()
+  while GPIO.input(echo_1)==1:
+    pulse_1_end = time.time()
+   
+  pulse_duration_1 = pulse_1_end - pulse_1_start
+  distance_1 = pulse_duration_1*(34326/2)
+  return distance
+
+#need to now define a condition to remain true whilst we want to sense
+#and find a way to print returned distance to the HMI, add 0.5s sleep
+#this will prevent jittery distance, use "%.2f cm"
 
