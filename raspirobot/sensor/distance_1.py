@@ -1,6 +1,6 @@
 import RPi.GPIO as GPIO
 from time import sleep
-import time
+from time import time
 GPIO.setmode(GPIO.BOARD)
 trigger_1 = 12 #using pi board numbering, select the sensor 1 gpio trigger
 echo_1 = 13 #select the echo pin for the input
@@ -14,13 +14,13 @@ def distance_1():
   GPIO.output(trigger_1, True)
   sleep(0.00001) #sensor requires a 10us squarewave to begin sensing
   GPIO.output(trigger_1, False)
-  pulse_1_start = time.time() #unsure why these lines are required, test again without
-  pulse_1_end = time.time() # "
+  pulse_1_start = time() #unsure why these lines are required, test again without
+  pulse_1_end = time() # "
   
   while GPIO.input(echo_1)==0:
-    pulse_1_start = time.time()
+    pulse_1_start = time()
   while GPIO.input(echo_1)==1:
-    pulse_1_end = time.time()
+    pulse_1_end = time()
    
   pulse_duration_1 = pulse_1_end - pulse_1_start
   distance_1 = pulse_duration_1*(34326/2)
