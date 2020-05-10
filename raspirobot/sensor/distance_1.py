@@ -24,7 +24,7 @@ def distance_1():
    
   pulse_duration_1 = pulse_1_end - pulse_1_start
   distance_1 = pulse_duration_1*(34326/2)
-  return distance
+  return distance_1
 
 #need to now define a condition to remain true whilst we want to sense
 #and find a way to print returned distance to the HMI, add 0.5s sleep
