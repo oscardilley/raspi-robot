@@ -5,13 +5,21 @@
 # This should be clearly organised and simple, calling functions without much other code.
 #-------------------------------------------------------------------------------------------------------------------------
 
-#import distance functions, find a way to use a function to calculate the average value using def distance_average(1, 2):
-
-#import forwards, backwards, left, right functions
-
+from time import sleep
 #boot up initial functionality and rest for a second or two
 print("Initialising robot...")
 sleep(2)
+
+#import distance functions, find a way to use a function to calculate the average value using def distance_average(1, 2):
+
+from sensor.distance_1 import distance_1
+
+#boot up initial functionality and rest for a second or two
+while True:
+  dist = distance_1()
+  print("Distance = %.2f" %dist)
+  sleep(0.5)
+#import forwards, backwards, left, right functions
 
 #run camera function
 
