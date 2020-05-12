@@ -17,6 +17,7 @@ def gui_1():
                  options=[
                    [["Fullscreen", function_1], ["Exit Fullscreen", function_2]]
                  ])
+  main_screen.display()
   return
 
 gui_1()
