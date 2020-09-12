@@ -1,6 +1,6 @@
 # this file is setup to test the functionality of my distance sensing program and to experiment with how to read off the distance
 
-import raspi-robot.raspirobot.sensor.distance_1
+import raspirobot.sensor.distance_1
 
 while True:
   distance = distance_1()
