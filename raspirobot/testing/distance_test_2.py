@@ -1,6 +1,6 @@
 # this file is setup to test the functionality of my distance sensing program and to experiment with how to read off the distance
 
-from ..sensor.distance_1 import distance_1
+from .sensor.distance_1 import distance_1
 
 while True:
   distance = distance_1()
