@@ -17,7 +17,7 @@
 
 from time import sleep
 from raspirobot.sensor.distance_1 import distance_1
-from GUI.GUI_1 import gui_1
+from raspirobot.GUI.GUI_1 import gui_1
 
 while True:
   dist = distance_1()
