@@ -19,6 +19,8 @@ from time import sleep
 from raspirobot.sensor.distance_1 import distance_1
 from raspirobot.GUI.GUI_2 import gui_2
 
+print("hello")
+
 while True:
   dist = distance_1()
   print("Distance = %.2f" %dist)
