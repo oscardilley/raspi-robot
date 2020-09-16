@@ -17,11 +17,11 @@
 
 from time import sleep
 from raspirobot.sensor.distance_1 import distance_1
-from raspirobot.GUI.GUI_1 import gui_1
+from raspirobot.GUI.GUI_2 import gui_2
 
 while True:
   dist = distance_1()
   print("Distance = %.2f" %dist)
   sleep(1)
 
-gui_1()
+gui_2()
