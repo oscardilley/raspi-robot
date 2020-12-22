@@ -17,6 +17,8 @@ GPIO.setup(input4, GPIO.OUT)
 pwm1 = GPIO.PWM(enable1, 100)
 pwm2 = GPIO.PWM(enable2, 100)
 
+pwm1.ChangeDutyCycle(50)
+pwm2.ChangeDutyCycle(50)
 GPIO.output(input1, True)
 GPIO.output(input2, False)
 GPIO.output(input3, True)
