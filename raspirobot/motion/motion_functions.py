@@ -39,16 +39,16 @@ class RaspiMotion():
     gpio.output(self.in2 , False)
     gpio.output(self.in3 , False)
     gpio.output(self.in4 , True)
-    self.pwm1.ChangeDutyCycle(50)
-    self.pwm2.ChangeDutyCycle(50) 
+    self.pwm1.ChangeDutyCycle(10)
+    self.pwm2.ChangeDutyCycle(100) 
     gpio.output(self.en1, True)
     gpio.output(self.en2, True)
-    sleep(1)
+    sleep(5)
     gpio.output(self.en1, False)
     gpio.output(self.en2, False)
     
    
-  def left_move(self):
+  def right_move(self):
     gpio.output(self.in1 , True)
     gpio.output(self.in2 , False)
     gpio.output(self.in3 , True)
@@ -61,7 +61,7 @@ class RaspiMotion():
     gpio.output(self.en1, False)
     gpio.output(self.en2, False)
     
-  def right_move(self):
+  def left_move(self):
     gpio.output(self.in1 , False)
     gpio.output(self.in2 , True)
     gpio.output(self.in3 , False)
@@ -74,8 +74,5 @@ class RaspiMotion():
     gpio.output(self.en1, False)
     gpio.output(self.en2, False)  
     
-    
-    
-    
 test = RaspiMotion()
-test.left_move()
+test.backward_move()
