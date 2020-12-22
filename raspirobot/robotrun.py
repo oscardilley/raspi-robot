@@ -19,12 +19,19 @@ from time import sleep
 from motion.motion_functions import RaspiMotion
 from sensor.distance_1 import distance_1
 from GUI.GUI_2 import gui_2
+from picamera import PiCamera
 
-print("hello")
+camera = PiCamera()
+motion = RaspiMotion()
+camera.start_preview()
 
-while True:
+for x in range(10):
+  motion.forward_move()
+  motion.left_move()
+
+for i in range(25):
   dist = distance_1()
   print("Distance = %.2f" %dist)
   sleep(1)
-
-gui_2()
+  
+camera.stop_preview()
