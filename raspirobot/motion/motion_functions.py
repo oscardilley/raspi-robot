@@ -20,6 +20,8 @@ class RaspiMotion():
     gpio.setup(self.in4, gpio.OUT)
     self.pwm1 = gpio.PWM(self.en1, 100)
     self.pwm2 = gpio.PWM(self.en2, 100)
+    self.pwm1.start(0)
+    self.pwm2.start(0)
     
   def forward_move(self):
     gpio.output(self.in1 , False)
