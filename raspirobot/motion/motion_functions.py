@@ -74,7 +74,5 @@ class RaspiMotion():
     sleep(1)
     gpio.output(self.en1, False)
     gpio.output(self.en2, False)  
-    
-test = RaspiMotion()
-test.backward_move()
+ 
 
