@@ -1,7 +1,6 @@
 from time import sleep
 import RPi.GPIO as gpio
 
-
 class RaspiMotion():
   
   def __init__(self):
@@ -78,3 +77,4 @@ class RaspiMotion():
     
 test = RaspiMotion()
 test.backward_move()
+
