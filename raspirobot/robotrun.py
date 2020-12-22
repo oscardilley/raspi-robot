@@ -16,6 +16,7 @@
 #-------------------------------------------------------------------------------------------------------------------------
 
 from time import sleep
+from motion.motion_functions import RaspiMotion
 from sensor.distance_1 import distance_1
 from GUI.GUI_2 import gui_2
 
