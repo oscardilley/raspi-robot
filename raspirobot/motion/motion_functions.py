@@ -1,5 +1,5 @@
 from time import sleep
-import RPi.gpio as gpio
+import RPi.GPIO as gpio
 
 
 class RaspiMotion():
