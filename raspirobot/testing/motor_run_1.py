@@ -30,5 +30,4 @@ pwm2.ChangeDutyCycle(50)
 sleep(35)
 GPIO.output(enable1, False)
 GPIO.output(enable2, False)
-GPIO.cleanup()
 
