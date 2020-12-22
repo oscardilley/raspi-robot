@@ -1,3 +1,3 @@
-from raspirobot import robotrun
+import robotrun
 if __name__ == '__main__':
   robotrun

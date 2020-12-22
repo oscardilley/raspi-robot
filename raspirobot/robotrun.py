@@ -16,8 +16,8 @@
 #-------------------------------------------------------------------------------------------------------------------------
 
 from time import sleep
-from raspirobot.sensor.distance_1 import distance_1
-from raspirobot.GUI.GUI_2 import gui_2
+from sensor.distance_1 import distance_1
+from GUI.GUI_2 import gui_2
 
 print("hello")
 
