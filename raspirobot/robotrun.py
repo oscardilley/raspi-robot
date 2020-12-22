@@ -26,10 +26,12 @@ motion = RaspiMotion()
 camera.start_preview()
 
 for x in range(10):
+  print("moving")
   motion.forward_move()
   motion.left_move()
 
 for i in range(25):
+  print("measuring")
   dist = distance_1()
   print("Distance = %.2f" %dist)
   sleep(1)
