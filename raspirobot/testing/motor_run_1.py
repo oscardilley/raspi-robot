@@ -1,7 +1,6 @@
 import RPi.GPIO as GPIO
 from time import sleep
 GPIO.setmode(GPIO.BOARD)
-GPIO.cleanup()
 enable1 = 3
 enable2 = 11
 input1 = 5
@@ -23,5 +22,5 @@ GPIO.output(input1, True)
 GPIO.output(input2, False)
 GPIO.output(input3, True)
 GPIO.output(input4, False)
-
+GPIO.cleanup()
 
