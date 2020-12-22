@@ -36,4 +36,5 @@ class RaspiMotion():
     gpio.output(self.en1, False)
     gpio.output(self.en2, False)
   
-RaspiMotion.forward_move()
+test = RaspiMotion()
+test.forward_move()
