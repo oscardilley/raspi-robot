@@ -21,6 +21,10 @@ from sensor.distance_1 import distance_1
 from GUI.GUI_2 import gui_2
 from picamera import PiCamera
 
+# NEXT: need to rewrite distance functionality as a class and create an instance
+# ALSO: need to get camera working
+# THEN: focus on GUI
+
 camera = PiCamera()
 motion = RaspiMotion()
 camera.start_preview()
