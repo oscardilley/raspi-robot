@@ -4,7 +4,6 @@ import RPi.GPIO as gpio
 
 class RaspiMotion():
   
-  
   def __init__(self):
     gpio.setmode(gpio.BOARD)
     self.en1 = 3
@@ -22,19 +21,61 @@ class RaspiMotion():
     self.pwm1 = gpio.PWM(self.en1, 100)
     self.pwm2 = gpio.PWM(self.en2, 100)
     
-    
   def forward_move(self):
     gpio.output(self.in1 , False)
     gpio.output(self.in2 , True)
     gpio.output(self.in3 , True)
     gpio.output(self.in4 , False)
+    self.pwm1.ChangeDutyCycle(75)
+    self.pwm2.ChangeDutyCycle(75) 
+    gpio.output(self.en1, True)
+    gpio.output(self.en2, True)
+    sleep(1)
+    gpio.output(self.en1, False)
+    gpio.output(self.en2, False)
+  
+  def backward_move(self):
+    gpio.output(self.in1 , True)
+    gpio.output(self.in2 , False)
+    gpio.output(self.in3 , False)
+    gpio.output(self.in4 , True)
     self.pwm1.ChangeDutyCycle(50)
     self.pwm2.ChangeDutyCycle(50) 
     gpio.output(self.en1, True)
     gpio.output(self.en2, True)
-    sleep(5)
+    sleep(1)
     gpio.output(self.en1, False)
     gpio.output(self.en2, False)
-  
+    
+   
+  def left_move(self):
+    gpio.output(self.in1 , True)
+    gpio.output(self.in2 , False)
+    gpio.output(self.in3 , True)
+    gpio.output(self.in4 , False)
+    self.pwm1.ChangeDutyCycle(100)
+    self.pwm2.ChangeDutyCycle(25) 
+    gpio.output(self.en1, True)
+    gpio.output(self.en2, True)
+    sleep(1)
+    gpio.output(self.en1, False)
+    gpio.output(self.en2, False)
+    
+  def right_move(self):
+    gpio.output(self.in1 , False)
+    gpio.output(self.in2 , True)
+    gpio.output(self.in3 , False)
+    gpio.output(self.in4 , True)
+    self.pwm1.ChangeDutyCycle(25)
+    self.pwm2.ChangeDutyCycle(100) 
+    gpio.output(self.en1, True)
+    gpio.output(self.en2, True)
+    sleep(1)
+    gpio.output(self.en1, False)
+    gpio.output(self.en2, False)  
+    
+    
+    
+    
 test = RaspiMotion()
-test.forward_move()
+test.left_move()
