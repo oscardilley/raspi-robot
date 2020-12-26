@@ -34,6 +34,10 @@ class RaspiMotion():
     sleep(1)
     gpio.output(self.en1, False)
     gpio.output(self.en2, False)
+    gpio.output(self.in1 , False)
+    gpio.output(self.in2 , False)
+    gpio.output(self.in3 , False)
+    gpio.output(self.in4 , False)
   
   def backward_move(self):
     gpio.output(self.in1 , True)
@@ -47,7 +51,10 @@ class RaspiMotion():
     sleep(1)
     gpio.output(self.en1, False)
     gpio.output(self.en2, False)
-    
+    gpio.output(self.in1 , False)
+    gpio.output(self.in2 , False)
+    gpio.output(self.in3 , False)
+    gpio.output(self.in4 , False)
    
   def right_move(self):
     gpio.output(self.in1 , True)
@@ -61,6 +68,10 @@ class RaspiMotion():
     sleep(1)
     gpio.output(self.en1, False)
     gpio.output(self.en2, False)
+    gpio.output(self.in1 , False)
+    gpio.output(self.in2 , False)
+    gpio.output(self.in3 , False)
+    gpio.output(self.in4 , False)
     
   def left_move(self):
     gpio.output(self.in1 , False)
@@ -74,5 +85,9 @@ class RaspiMotion():
     sleep(1)
     gpio.output(self.en1, False)
     gpio.output(self.en2, False)  
+    gpio.output(self.in1 , False)
+    gpio.output(self.in2 , False)
+    gpio.output(self.in3 , False)
+    gpio.output(self.in4 , False)
  
 
