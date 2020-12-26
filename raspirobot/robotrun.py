@@ -24,7 +24,7 @@ from picamera import PiCamera
 # NEXT: need to rewrite distance functionality as a class and create an instance
 # ALSO: need to get camera working
 # THEN: focus on GUI
-
+print("Entered script")
 camera = PiCamera()
 motion = RaspiMotion()
 camera.start_preview()
