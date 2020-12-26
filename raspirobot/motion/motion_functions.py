@@ -19,10 +19,10 @@ class RaspiMotion():
     gpio.setup(self.in4, gpio.OUT)
     self.pwm1 = gpio.PWM(self.en1, 100)
     self.pwm2 = gpio.PWM(self.en2, 100)
-    self.pwm1.start(0)
-    self.pwm2.start(0)
     
   def forward_move(self, length):
+    self.pwm1.start(0)
+    self.pwm2.start(0)
     gpio.output(self.in1 , False)
     gpio.output(self.in2 , True)
     gpio.output(self.in3 , True)
@@ -40,6 +40,8 @@ class RaspiMotion():
     gpio.output(self.in4 , False)
   
   def backward_move(self, length):
+    self.pwm1.start(0)
+    self.pwm2.start(0)
     gpio.output(self.in1 , True)
     gpio.output(self.in2 , False)
     gpio.output(self.in3 , False)
@@ -57,6 +59,8 @@ class RaspiMotion():
     gpio.output(self.in4 , False)
    
   def right_move(self, length):
+    self.pwm1.start(0)
+    self.pwm2.start(0)
     gpio.output(self.in1 , True)
     gpio.output(self.in2 , False)
     gpio.output(self.in3 , True)
@@ -74,6 +78,8 @@ class RaspiMotion():
     gpio.output(self.in4 , False)
     
   def left_move(self, length):
+    self.pwm1.start(0)
+    self.pwm2.start(0)
     gpio.output(self.in1 , False)
     gpio.output(self.in2 , True)
     gpio.output(self.in3 , False)
