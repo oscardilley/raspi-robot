@@ -28,7 +28,7 @@ class Distance_Sensor():
   def returning_distance(self):
     while True:
         sleep(1)
-        print(round(self.distance_function(), 2) + " cm")
+        print("%.2f cm" % self.distance_function())
     
 test = Distance_Sensor()
 test.returning_distance()
