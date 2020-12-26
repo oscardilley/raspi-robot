@@ -25,9 +25,7 @@ camera = PiCamera()
 motion = RaspiMotion()
 camera.start_preview()
 
-for x in range(10):
-  print("moving")
-  motion.forward_move()
-  motion.left_move()
+motion.forward_move(10)
+motion.left_move(10)
   
 camera.stop_preview()
