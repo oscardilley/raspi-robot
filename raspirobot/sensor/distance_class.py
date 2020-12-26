@@ -7,8 +7,8 @@ class Distance_Sensor():
     self.trigger = 13
     self.echo = 12
     gpio.setmode(gpio.BOARD)
-    gpio.setmode(self.trigger, gpio.OUT)
-    gpio.setmode(self.echo, gpio.IN)
+    gpio.setup(self.trigger, gpio.OUT)
+    gpio.setup(self.echo, gpio.IN)
     GPIO.output(self.trigger, False)
   
   def distance_function(self):
