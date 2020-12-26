@@ -22,7 +22,7 @@ class RaspiMotion():
     self.pwm1.start(0)
     self.pwm2.start(0)
     
-  def forward_move(self):
+  def forward_move(self, length):
     gpio.output(self.in1 , False)
     gpio.output(self.in2 , True)
     gpio.output(self.in3 , True)
@@ -31,7 +31,7 @@ class RaspiMotion():
     self.pwm2.ChangeDutyCycle(75) 
     gpio.output(self.en1, True)
     gpio.output(self.en2, True)
-    sleep(1)
+    sleep(int(length))
     gpio.output(self.en1, False)
     gpio.output(self.en2, False)
     gpio.output(self.in1 , False)
@@ -39,7 +39,7 @@ class RaspiMotion():
     gpio.output(self.in3 , False)
     gpio.output(self.in4 , False)
   
-  def backward_move(self):
+  def backward_move(self, length):
     gpio.output(self.in1 , True)
     gpio.output(self.in2 , False)
     gpio.output(self.in3 , False)
@@ -48,7 +48,7 @@ class RaspiMotion():
     self.pwm2.ChangeDutyCycle(50) 
     gpio.output(self.en1, True)
     gpio.output(self.en2, True)
-    sleep(1)
+    sleep(int(length))
     gpio.output(self.en1, False)
     gpio.output(self.en2, False)
     gpio.output(self.in1 , False)
@@ -56,7 +56,7 @@ class RaspiMotion():
     gpio.output(self.in3 , False)
     gpio.output(self.in4 , False)
    
-  def right_move(self):
+  def right_move(self, length):
     gpio.output(self.in1 , True)
     gpio.output(self.in2 , False)
     gpio.output(self.in3 , True)
@@ -65,7 +65,7 @@ class RaspiMotion():
     self.pwm2.ChangeDutyCycle(25) 
     gpio.output(self.en1, True)
     gpio.output(self.en2, True)
-    sleep(1)
+    sleep(int(length))
     gpio.output(self.en1, False)
     gpio.output(self.en2, False)
     gpio.output(self.in1 , False)
@@ -73,7 +73,7 @@ class RaspiMotion():
     gpio.output(self.in3 , False)
     gpio.output(self.in4 , False)
     
-  def left_move(self):
+  def left_move(self, length):
     gpio.output(self.in1 , False)
     gpio.output(self.in2 , True)
     gpio.output(self.in3 , False)
@@ -82,7 +82,7 @@ class RaspiMotion():
     self.pwm2.ChangeDutyCycle(100) 
     gpio.output(self.en1, True)
     gpio.output(self.en2, True)
-    sleep(1)
+    sleep(int(length))
     gpio.output(self.en1, False)
     gpio.output(self.en2, False)  
     gpio.output(self.in1 , False)
