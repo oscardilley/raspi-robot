@@ -21,7 +21,7 @@ class Distance_Sensor():
       pulse_start = time()
     while gpio.input(self.echo) == 1:
       pulse_end = time()
-    pulse_duration = pulse_end - pulse_end
+    pulse_duration = pulse_end - pulse_start
     distance = pulse_duration*(34326/2)
     return distance
  
