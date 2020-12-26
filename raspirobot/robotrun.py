@@ -24,8 +24,8 @@ from picamera import PiCamera
 camera = PiCamera()
 motion = RaspiMotion()
 camera.start_preview()
+sleep(2)
+camera.stop_preview()
 
 motion.forward_move(10)
 motion.left_move(10)
-  
-camera.stop_preview()
