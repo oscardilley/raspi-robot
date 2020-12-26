@@ -15,8 +15,6 @@ class Distance_Sensor():
     gpio.output(self.trigger, True)
     sleep(0.00001)
     gpio.output(self.trigger, False)
-    pulse_start = time()
-    pulse_end = time()
     while gpio.input(self.echo) == 0:
       pulse_start = time()
     while gpio.input(self.echo) == 1:
