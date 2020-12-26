@@ -9,7 +9,7 @@ class Distance_Sensor():
     gpio.setmode(gpio.BOARD)
     gpio.setup(self.trigger, gpio.OUT)
     gpio.setup(self.echo, gpio.IN)
-    GPIO.output(self.trigger, False)
+    gpio.output(self.trigger, False)
   
   def distance_function(self):
     gpio.output(self.trigger, True)
