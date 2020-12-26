@@ -28,4 +28,6 @@ sleep(2)
 camera.stop_preview()
 
 motion.forward_move(10)
+motion.backward_move(10)
+motion.right_move(10)
 motion.left_move(10)
