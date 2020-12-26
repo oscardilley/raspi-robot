@@ -10,8 +10,11 @@ class Distance_Sensor():
     gpio.setup(self.trigger, gpio.OUT)
     gpio.setup(self.echo, gpio.IN)
     gpio.output(self.trigger, False)
-  
+
   def distance_function(self):
+    pulse_start = time()
+    pulse_end = time()
+    sleep(1)
     gpio.output(self.trigger, True)
     sleep(0.00001)
     gpio.output(self.trigger, False)
