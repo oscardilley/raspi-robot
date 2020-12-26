@@ -11,7 +11,7 @@ class Distance_Sensor():
     gpio.setmode(self.echo, gpio.IN)
     GPIO.output(self.trigger, False)
   
-  def distance_function(self)
+  def distance_function(self):
     GPIO.output(self.trigger, True)
     sleep(0.00001)
     GPIO.output(self.trigger, False)
