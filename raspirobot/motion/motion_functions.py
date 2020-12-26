@@ -27,7 +27,7 @@ class RaspiMotion():
     gpio.output(self.in2 , True)
     gpio.output(self.in3 , True)
     gpio.output(self.in4 , False)
-    self.pwm1.ChangeDutyCycle(75)
+    self.pwm1.ChangeDutyCycle(5)
     self.pwm2.ChangeDutyCycle(75) 
     gpio.output(self.en1, True)
     gpio.output(self.en2, True)
