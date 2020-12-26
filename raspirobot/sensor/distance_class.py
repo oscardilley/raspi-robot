@@ -12,9 +12,9 @@ class Distance_Sensor():
     GPIO.output(self.trigger, False)
   
   def distance_function(self):
-    GPIO.output(self.trigger, True)
+    gpio.output(self.trigger, True)
     sleep(0.00001)
-    GPIO.output(self.trigger, False)
+    gpio.output(self.trigger, False)
     pulse_start = time()
     pulse_end = time()
     while gpio.input(self.echo) == 0:
