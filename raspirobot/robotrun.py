@@ -21,13 +21,18 @@ from sensor.distance_1 import distance_1
 # from GUI.GUI_2 import gui_2
 from picamera import PiCamera
 
-camera = PiCamera()
-motion = RaspiMotion()
-camera.start_preview()
-sleep(2)
-camera.stop_preview()
+try:
+  camera = PiCamera()
+  motion = RaspiMotion()
+  camera.start_preview()
+  sleep(2)
+  camera.stop_preview()
 
-motion.forward_move(3)
-motion.backward_move(3)
-motion.right_move(3)
-motion.left_move(3)
+  motion.forward_move(3)
+  motion.backward_move(3)
+  motion.right_move(3)
+  motion.left_move(3)
+except:
+  print("There has been an error")
+finally:
+  gpio.cleanup()
