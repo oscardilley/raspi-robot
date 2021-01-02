@@ -1,3 +1,10 @@
+'''
+This version appears to work to access the webpage with the camera preview, problem with camera preview could be if new IP is picked up b y pi, this needs changing in html
+to run go to 192.168.IP:8000 to run through port 8000, to test just camera, this should run with same command on port 8081
+Motion calling doesnt yet work?
+'''
+
+
 from flask import Flask, render_template, request, redirect, url_for, make_response
 import time
 from motion.motion_functions import RaspiMotion
