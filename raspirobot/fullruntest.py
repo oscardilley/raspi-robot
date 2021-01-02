@@ -16,16 +16,16 @@ def reroute(changepin):
     changePin = int(changepin) #cast changepin to an int
     if changePin == 1:
         print("Left")
-                move.left_move(3)
+        move.left_move(3)
     elif changePin == 2:
         print("Forward")
-                move.forward_move(3)
+        move.forward_move(3)
     elif changePin == 3:
         print("Right")
-                move.right_move(3)
+        move.right_move(3)
     elif changePin == 4:
         print("Reverse")
-                move.backward_move(3)
+        move.backward_move(3)
     response = make_response(redirect(url_for('index')))
     return(response)
 app.run(debug=True, host='0.0.0.0', port=8000) #set up the server in debug mode to the port 8000
