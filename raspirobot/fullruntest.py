@@ -15,16 +15,16 @@ def index():
 def reroute(changepin):
     changePin = int(changepin) #cast changepin to an int
     if changePin == 1:
-        print "Left"
+        print("Left")
                 move.left_move(3)
     elif changePin == 2:
-        print "Forward"
+        print("Forward")
                 move.forward_move(3)
     elif changePin == 3:
-        print "Right"
+        print("Right")
                 move.right_move(3)
     elif changePin == 4:
-        print "Reverse"
+        print("Reverse")
                 move.backward_move(3)
     response = make_response(redirect(url_for('index')))
     return(response)
